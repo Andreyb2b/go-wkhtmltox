@@ -369,7 +369,7 @@ func checkUrl(uri string) bool {
 		return false
     }
 
-    match, _ := regexp.MatchString("/htmltopdf/(.)+", u.Path)
+    match, _ := regexp.MatchString("(?i)^/htmltopdf/(.)+$", u.Path)
 
 	return match
 }
